@@ -1,0 +1,218 @@
+/* @import url('https://fonts.googleapis.com/css?family=Noto+Sans+SC&display=swap'); */
+
+/* 调用自体 */
+
+body {
+  font-family: 
+  /* -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, */
+  sans-serif, 'Yahei';
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 1.5; 
+
+  -webkit-font-smothing-: antialiased;
+  /* safari 字体平滑 */
+} 
+
+a {
+  color: #5334F5;
+  text-decoration: none;
+  /* 下划线隐藏 decoration 装饰 */
+  font-weight: 600;
+}
+
+.Hero{
+  background: url("../images/wallpaper3.jpg");
+  height: 880px;
+  background-size: cover;
+  /* 图片类型设置为 “封面” */
+  background-position: center;
+  position: relative;
+}
+
+.HeroGroup{
+  margin: 0 auto 0 auto;
+  /* css样式，指在页面上位置相邻的两个元素之间的距离关系，如margin-top是目标元素和目标上方的元素之间的距离，margin-left是目标元素和其左侧的元素之间的距离 */
+  /* 距离边缘，四个数值为“上，右，下，左”；auto 为自动适配边距 */
+
+  max-width: 600px ;
+  /* 宽度限制 */
+
+  padding: 120px 160px;
+  /* css样式，指元素内部的空白占据的空间 */
+  /* padding 为内边距距离，四个数值为“上，右，下，左”，只写两个则重复 */
+
+  text-align: center;
+  /* 文本框居中对齐 */
+}
+
+.Hero h1{
+  margin: 0;
+  color: white;
+  font-size: 60px;
+  line-height: 1.2;
+  opacity: 0;
+  animation: HeroAnimation;
+  animation-duration:1s;
+  /* animation-duration 属性定义动画完成一个周期所需要的时间，以秒或毫秒计。 */
+  animation-timing-function: ease-out ;
+  /* animation-timing-function 规定动画的速度曲线。 */
+  animation-fill-mode: forwards;
+  /* animation-fill-mode 属性规定动画在播放之前或之后，其动画效果是否可见。
+  http://www.w3school.com.cn/cssref/pr_animation-fill-mode.asp */
+}
+
+.Hero p{
+  font-weight: 200;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 28px;
+  line-height: 1.4;
+  opacity: 0;
+  animation: HeroAnimation;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+  /* animation-delay 属性定义动画何时开始。animation-delay 值以秒或毫秒计。提示：允许负值，-2s 使动画马上开始，但跳过 2 秒进入动画。 */
+}
+
+.Hero button{
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 200;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 12px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  outline: none;
+  cursor: pointer;
+  /* opacity: 0; */
+  transition: 0.3s;
+  -moz-transition: 0.3s; /* Firefox 4 */
+  -webkit-transition: 0.3s; /* Safari 和 Chrome */
+  -o-transition: 0.3s; /* Opera */
+  animation: HeroAnimation 1s ease-in-out 0.2s;
+  /* animation 后调用动画状态，duration,-fill-mode,timing-function,delay */
+
+}
+
+.Hero button:hover{
+  color: #FFF;
+  background: rgba(0, 0, 0, 0.4);
+  border: none;
+  transform: scale(1.2);
+}
+
+@media (max-width: 640px){
+  .HeroGroup{
+    padding: 80px 60px;
+  }
+
+  .Hero h1{
+    font-size: 40px;
+  }
+
+  .Hero p{
+    font-size: 24px;
+  }
+}
+
+
+@media (max-width: 840px) and (min-width: 640px){
+  .HeroGroup{
+    padding: 100px 60px;
+  }
+
+  .Hero h1{
+    font-size: 48px;
+  }
+
+  .Hero p{
+    font-size: 24px;
+  }
+}
+
+@keyframes HeroAnimation{
+   0% {
+     opacity: 0;
+     transform: translateY(20px);
+   }
+
+   100% {
+     opacity: 1; 
+     transform: translateY(0);
+   }
+   /* 以百分比来规定改变发生的时间，或者通过关键词 "from" 和 "to"，等价于 0% 和 100%。
+  0% 是动画的开始时间，100% 动画的结束时间。
+  为了获得最佳的浏览器支持，您应该始终定义 0% 和 100% 选择器。 */
+}
+
+.Hero svg{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.HeroIcons {
+  margin: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+    /* css fr 单位是一个自适应单位，fr单位被用于在一系列长度值中分配剩余空间，如果多个已指定了多个部分，则剩下的空间根据各自的数字按比例分配。 */
+  grid-gap: 40px;
+  justify-items: center;
+}
+
+@media (max-width: 640px){
+  .HeroIcons{
+    margin:40px 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+  }
+}
+
+.Cards h2{
+  position: relative;
+  margin: 0 40px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+.CardGroup {
+  align-content: center;
+  margin: auto;
+  padding: 60px 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  grid-row-gap: 40px;
+  justify-items: center;
+}
+
+@media (max-width: 1060px) {
+  .CardGroup{
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .CardGroup{
+    grid-template-columns: repeat(1, 1fr)
+  }
+}
+
+  /* position 属性规定元素的定位类型。这个属性定义建立元素布局所用的定位机制。任何元素都可以定位，不过绝对或固定元素会生成一个块级框，而不论该元素本身是什么类型。相对定位元素会相对于它在正常流中的默认位置偏移。 */
+  /* absolute	
+  生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。
+  元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
+  fixed	
+  生成绝对定位的元素，相对于浏览器窗口进行定位。
+  元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。
+  relative	
+  生成相对定位的元素，相对于其正常位置进行定位。
+  因此，"left:20" 会向元素的 LEFT 位置添加 20 像素。
+  static	默认值。没有定位，元素出现在正常的流中（忽略 top, bottom, left, right 或者 z-index 声明）。
+  inherit	规定应该从父元素继承 position 属性的值。 */

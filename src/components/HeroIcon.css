@@ -1,0 +1,9 @@
+.HeroIcon{
+    width: 60px;
+    transition: 0.3s;
+    animation-timing-function: cubic-bezier(0.2, 0.6, 0.8, 1);
+}
+
+.HeroIcon:hover{
+    transform: scale(1.5);
+}
