@@ -7,10 +7,11 @@ import HeroIcon from "../components/HeroIcon"
 import Card from "../components/Card"
 import Section from "../components/Section"
 import IndexBackgroundWave from "../components/indexBackgroundWave"
+import GridText from "../components/GridText"
 
 const IndexPage = () => (
   <Layout>
-    {/* <SEO title="Home" /> */}
+    <SEO title="Home" />
     <div className="Hero">
       <div className="HeroGroup">
         <h1>Learn to<br/>design and code modern apps</h1>
@@ -73,6 +74,7 @@ const IndexPage = () => (
       title="React for designers"
       text="Learn how to build a modern site using React and the most efficient libraries to get your site/product online. Get familiar with Grid CSS, animations, interactions, dynamic data with Contentful and deploying your site with Netlify."
     />
+    <GridText />
   </Layout>
 )
 

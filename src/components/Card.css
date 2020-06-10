@@ -22,7 +22,7 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     /* 非负值，用单位 fr 来定义网格轨道大小的弹性系数。 每个定义了 <flex> 的网格轨道会按比例分配剩余的可用空间。当外层用一个 minmax() 表示时，它将是一个自动最小值(即 minmax(auto, <flex>) ) 。 */
-    transition: 0.5s;
+    transition: 0.3s;
 }
 
 .Card:hover{

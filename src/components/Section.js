@@ -5,13 +5,14 @@ import IndexBackgroundWave from "../components/indexBackgroundWave"
 
 const Conaiter = styled.div`
     position: relative;
-    margin: 80px auto;
+    margin: 20px auto;
     background: url(${props => props.image});
     height: 720px;
     background-size: cover;
     display: grid;
     grid-template-rows: repeat(2,300px);
     grid-gap: 20px;
+    overflow: hidden;
 `
 const SectionLogo = styled.img`
     align-self: end;
@@ -24,28 +25,41 @@ const SectionTitleGroup = styled.div`
     justify-content: center;
     grid-gap: 80px;
     align-items: center;
+
+    @media(max-width: 900px){
+        grid-template-columns: 600px;
+        grid-gap: 0px;
+        justify-items: center;
+    }
 `
 const SectionTitle = styled.h3`
     color: white;
     font-size: 60px;
+    @media(max-width: 900px){
+        font-size: 48px;
+        margin: 20px auto 0;
+    }
 `
 const SectionText = styled.p`
     color: white;
     font-size: 20px;
     line-height: 28px;
     width: 480px;
+    @media(max-width: 900px){
+        width: 480px;
+    }
 `
 
 const WaveTop = styled.div`
     position: absolute;
     width: 100%;
     transform: rotate(180deg);
-    top:-8px;
+    top:-60px;
 `
 const WaveBottom = styled.div`
     position: absolute;
     width: 100%;
-    bottom:-8px;
+    bottom:-60px;
 `
 
 const Section = props => (
