@@ -10,14 +10,28 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./Header"
+import Footer from "./Footer"
 import "./layout.css"
 
 const Layout = ({ children }) => {
+  // 调用 gatsby-config.js 中 siteMetadata
+  // 加入 Contentful 动态数据 ，适当位置使用 .map展开，本项目案例在 Footer.js 中
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {
           title
+          author
+          description
+          kewords
+        }
+      }
+      allContentfulFootLink {
+        edges {
+          node {
+            title
+            url
+          }
         }
       }
     }
@@ -32,6 +46,7 @@ const Layout = ({ children }) => {
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer> */}
+        <Footer data={data} />
       </div>
   )
 }

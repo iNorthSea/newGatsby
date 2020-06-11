@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `NewGatsby Test`,
+    title: `Design+Code`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    author: `NorthSea`,
+    kewords: `DesignCode, NorthSea`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -12,6 +13,14 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options:{
+        spaceId: `m1dqcl5fbfq8`,
+        accessToken: `69fGGl5s68Jv9Y93-phxKrcFJhGj-dRp7VUkY-RO3l8`,
+      }
+      // graphql在 layout.js 中展开
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

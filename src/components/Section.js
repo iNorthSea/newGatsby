@@ -54,12 +54,12 @@ const WaveTop = styled.div`
     position: absolute;
     width: 100%;
     transform: rotate(180deg);
-    top:-60px;
+    top:-40px;
 `
 const WaveBottom = styled.div`
     position: absolute;
     width: 100%;
-    bottom:-60px;
+    bottom:-40px;
 `
 
 const Section = props => (
