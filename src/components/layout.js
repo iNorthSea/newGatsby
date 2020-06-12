@@ -26,11 +26,12 @@ const Layout = ({ children }) => {
           kewords
         }
       }
-      allContentfulFootLink {
+      allContentfulFootLink(sort:  {fields: [createdAt], order: [ASC]}) {
         edges {
           node {
             title
             url
+            createdAt
           }
         }
       }

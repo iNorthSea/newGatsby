@@ -2,7 +2,7 @@
     "cells": [
         {
             "title": "Intro to React",
-            "image": "./src/images/logo-react-small.png"
+            "image": "https://cl.ly/1U1F170x3D0L/download/logo-react-small.png"
         },
         {
             "title": "Basic Styling in CSS",

@@ -1,7 +1,7 @@
 import React from "react"
 import styled from 'styled-components'
 import Cell from "./cell"
-import staticdata from "../../staticdata.json"
+import staticdata from "../staticdata.json"
 
 const GridTextTitle = styled.h3`
     font-size: 18px;
@@ -32,6 +32,7 @@ const GridText = () => (
                 <Cell
                 title={cell.title}
                 image={cell.image}
+                // image={cell.image.indexOf('http') > -1 ? cell.image : require(cell.image)}
                 />
             ))}
         </GridTextGroup>

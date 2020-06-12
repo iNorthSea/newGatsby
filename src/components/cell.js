@@ -20,7 +20,14 @@ const CellImage = styled.div`
     border-radius: 12px;
     background-image: url(${props => props.image});
     background-size: 60px;
-`
+    transition: 0.2s ease-out;
+
+    &:hover {
+        transform: scale(1.2)
+    }
+    `
+/* background-image:url('${props.image.indexOf("http")>-1 ? props.image : require(props.image)}'); */
+/* background-image: url(${props => props.image.indexOf('http')>-1 ? props.image : require(props.image)}); */
 
 const CellTitle = styled.div`
     font-size: 24px;

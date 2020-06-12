@@ -22,6 +22,10 @@ a {
   font-weight: 600;
 }
 
+a:hover {
+  color: #8400ff;
+}
+
 .Hero{
   background: url("../images/wallpaper3.jpg");
   height: 880px;
