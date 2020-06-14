@@ -70,7 +70,7 @@ const Text = styled.p`
     justify-self: center;
 `
 
-const Footer = ({data}) => (
+const Footer = ({data}) => (    
     <Container>
         <Title>Tweet “Prototype and build apps with React and Swift. New courses by @MengTo”</Title>
         <Button>Tweet</Button>
@@ -82,7 +82,7 @@ const Footer = ({data}) => (
                 <a href = {edge.node.url}>{edge.node.title}</a>
             ))}
         </LinkGroup>
-        <Text>Backgrounds made in Cinema 4D, iOS app in Swift, site in React. Email us to ask anything. © 2018 - Terms of Service - Privacy Policy</Text>
+        <Text>Backgrounds made in Cinema 4D, iOS app in Swift, site in React. <a href = "mailt:northsea@vip.qq.com" >Email us</a> to ask anything. © 2018 - Terms of Service - Privacy Policy</Text>
     </Container>
 )
 
